@@ -18,7 +18,7 @@ import React from "react";
 export default function RepositoriesSkeleton() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+      {[1, 2, 3].map((item) => (
         <CardSkeleton key={item} />
       ))}
     </div>
@@ -32,7 +32,7 @@ function CardSkeleton() {
         <CardTitle>
           <Skeleton className="w-52 h-5 rounded-full" />
         </CardTitle>
-        <CardDescription className="text-ellipsis overflow-hidden">
+        <CardDescription className="">
           <Skeleton className="w-48 h-5 rounded-full" />
         </CardDescription>
       </CardHeader>

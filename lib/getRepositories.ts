@@ -14,6 +14,8 @@ interface Repository {
         // Add other properties for the owner if needed
     };
     created_at: string;
+    language: string;
+    description: string;
     // Add other properties for the repository if needed
 }
 
