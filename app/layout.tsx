@@ -1,8 +1,7 @@
 "use client";
-import useTheme from "@/store/store";
+import store from "@/store/store";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { useStore } from "zustand";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,14 +10,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const darkMode = useTheme((state) => state.darkMode);
+  const darkMode = store((state) => state.darkMode);
   return (
     <html lang="en">
-      <body
-        className={darkMode ? "dark transition-all" : "root transition-all"}
-      >
-        {children}
-      </body>
+      <body className={darkMode ? "dark" : "root"}>{children}</body>
     </html>
   );
 }

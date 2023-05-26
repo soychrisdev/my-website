@@ -15,9 +15,9 @@ export default function ThemeHandler() {
     <div className="flex items-center space-x-2">
       <div className="transition-all">
         {darkModeState ? (
-          <SunIcon className="animate-spin-slow" />
-        ) : (
           <MoonIcon className="animate-pulse" />
+        ) : (
+          <SunIcon className="animate-spin-slow" />
         )}
       </div>
       <Switch
