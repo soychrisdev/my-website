@@ -10,22 +10,18 @@ export default async function Home() {
   return (
     <main className="container m-auto min-h-screen py-4 px-4 p-2">
       <div className="grid grid-col-2 sm:grid-cols-1">
-        {/* header / navbar */}
-        <div className="flex justify-between">
-          <Navbar />
-        </div>
         {/* landing content 1 */}
-        <div className="items-center text-center">
+        <div className="items-center text-center mt-5">
           <h1 className="font-extrabold">Hey! ✌️ Welcome to my website!</h1>
           <p>Im Christian Mesina, Full Stack Software Engineer.</p>
         </div>
         <Separator className="mt-5 mb-5" />
         {/* my blogs */}
-        <div className="bg-card text-start">
-          <h2 className="text-foreground">
-            Check out my last blogs!
-            <Badge variant="secondary">In development 🧑‍💻</Badge>
-          </h2>
+        <div className="bg-card text-start mb-5">
+          <h2 className="text-foreground">Check out my last blogs!</h2>
+          <Badge variant="secondary" className="ml-5">
+            In development 🧑‍💻
+          </Badge>
         </div>
         <Blogs />
         <Separator className="mt-5 mb-5" />

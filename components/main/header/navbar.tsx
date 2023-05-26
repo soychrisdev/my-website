@@ -4,9 +4,9 @@ import { StarIcon } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <>
+    <div className="flex justify-between">
       <StarIcon />
       <ThemeHandler />
-    </>
+    </div>
   );
 }
