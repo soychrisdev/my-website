@@ -7,19 +7,21 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import Link from "next/link";
 import React from "react";
 
 export default function Blogs() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {[1, 2, 3].map((item) => (
-        <BlogCard key={item} />
+        <BlogCard key={item} id={item}/>
       ))}
     </div>
   );
 }
 
-function BlogCard() {
+function BlogCard({params}) {
+  console.log(JSON.stringify(params))
   return (
     <Card className="m-1 hover:animate-pulse">
       <CardHeader>
