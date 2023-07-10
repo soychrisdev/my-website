@@ -2,6 +2,7 @@ import Blogs from "@/components/main/blogs/Blogs";
 import Navbar from "@/components/main/header/navbar";
 import Repositories from "@/components/main/repositories/Repositories";
 import RepositoriesSkeleton from "@/components/main/repositories/RepositoriesSkeleton";
+import ModalTest from "@/components/main/test/modal";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Suspense } from "react";
@@ -16,6 +17,7 @@ export default async function Home() {
           <p>Im Christian Mesina, Full Stack Software Engineer.</p>
         </div>
         <Separator className="mt-5 mb-5" />
+        <ModalTest/>
         {/* my blogs */}
         <div className="bg-card text-start mb-5">
           <h2 className="text-foreground">Check out my last blogs!</h2>
