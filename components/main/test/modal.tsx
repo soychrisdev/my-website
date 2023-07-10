@@ -20,7 +20,7 @@ console.log(`EL MODAL SE ENCUENTRA: ${open}`)
         <>
 
             <AlertDialog open={open}>
-                <AlertDialogTrigger onClick={handleClick }  disabled={open}>Open</AlertDialogTrigger>
+                <AlertDialogTrigger onClick={handleClick} >Open</AlertDialogTrigger>
                 <AlertDialogContent>
                     <AlertDialogHeader>
                         <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
