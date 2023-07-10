@@ -1,12 +1,16 @@
 'use client'
 
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
+import { AlertDialog, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
+
 import { useEffect, useState } from "react"
 
 export default function ModalTest() {
     const [open, setOpen] = useState(false);
 
+    const handleClick = () => {
+    console.log(`se preciono el boton y el estado del boton cambio a: ${open}`)
+     setOpen(!open);
+    }
     useEffect( ()=> {
 console.log(`EL MODAL SE ENCUENTRA: ${open}`)
     }, [open])
@@ -16,7 +20,7 @@ console.log(`EL MODAL SE ENCUENTRA: ${open}`)
         <>
 
             <AlertDialog open={open}>
-                <AlertDialogTrigger onClick={ () => setOpen(!open)}  disabled={open}>Open</AlertDialogTrigger>
+                <AlertDialogTrigger onClick={handleClick }  disabled={open}>Open</AlertDialogTrigger>
                 <AlertDialogContent>
                     <AlertDialogHeader>
                         <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
@@ -26,7 +30,7 @@ console.log(`EL MODAL SE ENCUENTRA: ${open}`)
                         </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                        <AlertDialogCancel onClick={ () => setOpen(!open)}>Cancel</AlertDialogCancel>
+                        <AlertDialogCancel onClick={ handleClick}>Cancel</AlertDialogCancel>
                     </AlertDialogFooter>
                 </AlertDialogContent>
             </AlertDialog>
